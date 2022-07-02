@@ -35,7 +35,7 @@ const FEEDBACK_LINK_WITH_TRANSLATIONS = {
 };
 
 export default {
-    projectLink: 'https://beets.fi',
+    projectLink: 'https://github.com/beethovenxfi',
     docsRepositoryBase: 'https://github.com/beethovenxfi/beethovenx-docs/blob/main/pages',
     titleSuffix: ' – SWR',
     search: true,
