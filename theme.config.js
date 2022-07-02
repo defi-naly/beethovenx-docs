@@ -35,8 +35,8 @@ const FEEDBACK_LINK_WITH_TRANSLATIONS = {
 };
 
 export default {
-    projectLink: 'https://github.com/vercel/swr',
-    docsRepositoryBase: 'https://github.com/vercel/swr-site/blob/master/pages',
+    projectLink: 'https://beets.fi',
+    docsRepositoryBase: 'https://github.com/beethovenxfi/beethovenx-docs/blob/main/pages',
     titleSuffix: ' – SWR',
     search: true,
     unstable_flexsearch: true,
@@ -53,7 +53,7 @@ export default {
                 <Logo height={12} />
                 <span
                     className="mx-2 font-extrabold hidden md:inline select-none"
-                    title={'SWR: ' + (TITLE_WITH_TRANSLATIONS[locale] || '')}
+                    title={'Beethoven X: ' + (TITLE_WITH_TRANSLATIONS[locale] || '')}
                 >
                     SWR
                 </span>
