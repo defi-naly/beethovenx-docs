@@ -1,110 +1,34 @@
-# Performance
+# <p align="center"> The Vault
+  <img width="1500" alt="beetx-cover2x" src="https://user-images.githubusercontent.com/109503546/207081715-76e61f6a-57ab-48ef-998b-bc62c6bcfe95.png">
 
-SWR provides critical functionality in all kinds of web apps, so **performance** is a top priority.
+##### _<p align="center"> Flexible. Efficient. Secure. Why just listen to music when you can play?_
+  
+Unlike other DEXs that manage assets across multiple contracts on their protocol, Balancer V2 incorporates a single Vault that holds and manages ALL of the assets across ALL of the pools. This unlocks an avenue of creation that is unmatched in DeFi. Pools inherit the ability to be fully customizable whilst also maintaining a rigorous base layer of security. Traders also unlock a seamless and gas-efficient route for swaps. Creative efficiency!
+  
+ ##  <p align="center"> How does it work?
+   
+The vault achieves this innovative functionality by separating the AMM logic from the token management and accounting. Since the pool contracts no longer need to actively manage their assets (The Vault does) a degree of simplicity is achieved that facilitates new pool development and innovation. Anyone is now able to plug into the vault's existing liquidity. As such, pools inherit the ability to be fully customizable; developers can now easily build specialized pool constructs that are innovative and tailor-made to meet the demands of the market. The Vault unlocks a truly welcoming and builder-friendly environment. 
 
-SWR’s built-in **caching** and **[deduplication](#deduplication)** skips unnecessary network requests, but
-the performance of the `useSWR` hook itself still matters. In a complex app, there could be hundreds of `useSWR` calls in a single page render.
+![unnamed](https://user-images.githubusercontent.com/109503546/207080295-72f099db-dc28-4a62-a1c9-2709ce8386a3.png)
 
-SWR ensures that your app has:
+This Vault is also the interface that allows for multi-hop, gas-efficient trading. Normally, each pool on a DEX is its own entity (contract) that holds and accounts for its own tokens. This means that if a user wants to trade between multiple pools, the assets need to be transferred from pool to pool. Multi-hop trading is inefficient and costly. The Vault solves this issue. As all of the tokens are stored within a single contract, the Vault keeps an internal record of which Pool is holding what and then performs a batch swap against multiple pools at the end of the transaction. Only the final amount of tokens is transferred to and from the vault resulting in a significantly more efficient, cost-effective process. 
 
-- _no unnecessary requests_
-- _no unnecessary re-renders_
-- _no unnecessary code imported_
+  ##  <p align="center"> Key Benefits
+  #### **<p align="center">  Flexible**
+As the vault holds all the assets across all the pools, it unlocks a base layer of functionality that can then easily be built upon.  Developers can plug into the vault and build specialized pool constructs that are innovative and tailor-made to meet the demands of the market.
+    
+  #### **<p align="center">   Efficient** 
+Seamless swaps. The Vault unlocks a gas-efficient alternative to multi-hop trading. By storing all tokens within the same contract, instead of tokens transferring on each step of trades between pools, the Vault only transfers tokens at the input and output stages. 
 
-without any code changes from you.
+ #### **<p align="center">    Safe**
+Safe, permissionless creation. As a core piece of technology the Vault has been put under rigorous testing to minimize the impact from smart contract risk. Heavily audited and battle tested the Vault is as secure as they come. Rest easy and enjoy the multitude of benefits the Vault unlocks. 
+   
+ #### **<p align="center"> Customizable**  
+Let creativity take center stage. Protocols are able to plug directly into the Vault's underlying architecture and design  custom trading systems without having to build their own Decentralized Exchange from scratch. 
+Scalable
 
-## Deduplication
+ #### **<p align="center"> Collaboration over competition**
+By streamlining the process for development, the Vault encourages a permissionless platform for innovation that is both highly scalable and flexible. This creates an environment primed for growth and as such puts protocols in a position where they can best serve their users.
 
-It’s very common to reuse SWR hooks in your app. For example, an app that renders the current user’s avatar 5 times:
-
-```jsx
-function useUser () {
-  return useSWR('/api/user', fetcher)
-}
-
-function Avatar () {
-  const { data, error } = useUser()
-
-  if (error) return <Error />
-  if (!data) return <Spinner />
-
-  return <img src={data.avatar_url} />
-}
-
-function App () {
-  return <>
-    <Avatar />
-    <Avatar />
-    <Avatar />
-    <Avatar />
-    <Avatar />
-  </>
-}
-```
-
-Each `<Avatar>` component has a `useSWR` hook inside. Since they have the same SWR key and are rendered almost at the same time, **only 1 network request will be made**.
-
-You can reuse your data hooks (like `useUser` in the example above) everywhere, without worrying about performance or duplicated requests.
-
-There is also a [`dedupingInterval` option](/docs/options) for overriding the default deduplication interval.
-
-## Deep Comparison
-
-SWR **deep compares** data changes by default. If the `data` value isn’t changed, a re-render will not be triggered.
-
-You can also customize the comparison function via the [`compare` option](/docs/options) if you want to change the behavior.
-For example, some API responses return a server timestamp that you might want to exclude from the data diff.
-
-## Dependency Collection
-
-`useSWR` returns 3 **stateful** values: `data`, `error` and `isValidating`, each one can be updated independently.
-For example, if we print those values within a full data-fetching lifecycle, it will be something like this:
-
-```jsx
-function App () {
-  const { data, error, isValidating } = useSWR('/api', fetcher)
-  console.log(data, error, isValidating)
-  return null
-}
-```
-
-In the worst case (the first request failed, then the retry was successful), you will see 4 lines of logs:
-
-```js
-// console.log(data, error, isValidating)
-undefined undefined true  // => start fetching
-undefined Error false     // => end fetching, got an error
-undefined Error true      // => start retrying
-Data undefined false      // => end retrying, get the data
-```
-
-The state changes make sense. But that also means our component **rendered 4 times**.
-
-If we change our component to only use `data`:
-
-```jsx
-function App () {
-  const { data } = useSWR('/api', fetcher)
-  console.log(data)
-  return null
-}
-```
-
-The magic happens — there are only **2 re-renders** now:
-
-```js
-// console.log(data)
-undefined // => hydration / initial render
-Data      // => end retrying, get the data
-```
-
-The exact same process has happened internally, there was an error from the first request, then we got the data from the retry.
-However, **SWR only updates the states that are used by the component**, which is only `data` now.
-
-If you are not always using all these 3 states, you are already benefitting from this feature.
-At [Vercel](https://vercel.com), this optimization results in ~60% fewer re-renders.
-
-## Tree Shaking
-
-The SWR package is [tree-shakeable](https://webpack.js.org/guides/tree-shaking) and side-effect free.
-That means if you are only importing the core `useSWR` API, unused APIs like `useSWRInfinite` won't be bundled in your application.
+ #### **<p align="center"> Secure**
+Security lies at the heart of functionality. The Vault keeps individual pool balances strictly independent, this ensures that potentially malicious pools or tokens cannot negatively impact other pools. The combined liquidity of tokens never affects the price impact in the individual pools.
