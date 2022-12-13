@@ -14,7 +14,7 @@ module.exports = withNextra({
         return [
             {
                 source: '/docs',
-                destination: '/docs/getting-started',
+                destination: '/docs/imagine',
                 statusCode: 301,
             },
             {
@@ -44,7 +44,7 @@ module.exports = withNextra({
             },
             {
                 source: '/docs',
-                destination: '/docs/getting-started',
+                destination: '/docs/imagine',
                 statusCode: 302,
             },
             {
