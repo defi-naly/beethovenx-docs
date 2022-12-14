@@ -1,1 +1,31 @@
 # The Vault
+_Flexible. Efficient. Secure. Why just listen to music when you can play?_
+
+Unlike other DEXs that manage assets across multiple contracts on their protocol, Balancer V2 incorporates a single Vault that holds and manages ALL of the assets across ALL of the pools. This unlocks an avenue of creation that is unmatched in DeFi. Pools inherit the ability to be fully customizable whilst also maintaining a rigorous base layer of security. Traders also unlock a seamless and gas-efficient route for swaps. Creative efficiency!
+
+## How does it work?
+The vault achieves this innovative functionality by separating the AMM logic from the token management and accounting. Since the pool contracts no longer need to actively manage their assets (The Vault does) a degree of simplicity is achieved that facilitates new pool development and innovation. Anyone is now able to plug into the vault's existing liquidity. As such, pools inherit the ability to be fully customizable; developers can now easily build specialized pool constructs that are innovative and tailor-made to meet the demands of the market. The Vault unlocks a truly welcoming and builder-friendly environment. 
+![unnamed](https://user-images.githubusercontent.com/109503546/207652111-a5693053-d4fb-4ca6-93a7-689af452791e.png)
+This Vault is also the interface that allows for multi-hop, gas-efficient trading. Normally, each pool on a DEX is its own entity (contract) that holds and accounts for its own tokens. This means that if a user wants to trade between multiple pools, the assets need to be transferred from pool to pool. Multi-hop trading is inefficient and costly. The Vault solves this issue. As all of the tokens are stored within a single contract, the Vault keeps an internal record of which Pool is holding what and then performs a batch swap against multiple pools at the end of the transaction. Only the final amount of tokens is transferred to and from the vault resulting in a significantly more efficient, cost-effective process. 
+
+## Key benefits
+
+#### Flexible 
+
+As the vault holds all the assets across all the pools, it unlocks a base layer of functionality that can then easily be built upon.  Developers can plug into the vault and build specialized pool constructs that are innovative and tailor-made to meet the demands of the market.
+
+#### Efficient 
+Seamless swaps. The Vault unlocks a gas-efficient alternative to multi-hop trading. By storing all tokens within the same contract, instead of tokens transferring on each step of trades between pools, the Vault only transfers tokens at the input and output stages. 
+
+#### Safe
+Safe, permissionless creation. As a core piece of technology the Vault has been put under rigorous testing to minimize the impact from smart contract risk. Heavily audited and battle tested the Vault is as secure as they come. Rest easy and enjoy the multitude of benefits the Vault unlocks. 
+
+#### Customizable  
+Let creativity take center stage. Protocols are able to plug directly into the Vault's underlying architecture and design  custom trading systems without having to build their own Decentralized Exchange from scratch. 
+
+#### Scalable
+
+Collaboration over competition. By streamlining the process for development, the Vault encourages a permissionless platform for innovation that is both highly scalable and flexible. This creates an environment primed for growth and as such puts protocols in a position where they can best serve their users.
+
+#### Secure
+Security lies at the heart of functionality. The Vault keeps individual pool balances strictly independent, this ensures that potentially malicious pools or tokens cannot negatively impact other pools. The combined liquidity of tokens never affects the price impact in the individual pools.
