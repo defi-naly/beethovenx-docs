@@ -3,18 +3,5 @@
     "discover": "Discover",
     "explore": "Explore",
     "limitless-flexibility": "Limitless Flexibility",
-    "boundless-oppurtunity": "Boundless Oppurtunity",
-    "data-fetching": "Data Fetching",
-    "error-handling": "Error Handling",
-    "revalidation": "Auto Revalidation",
-    "conditional-fetching": "Conditional Data Fetching",
-    "arguments": "Arguments",
-    "mutation": "Mutation",
-    "pagination": "Pagination abc",
-    "prefetching": "Prefetching",
-    "with-nextjs": "Next.js SSG and SSR",
-    "typescript": "TypeScript",
-    "middleware": "Middleware",
-    "advanced": "Advanced",
-    "change-log": "Change Log"
+    "boundless-oppurtunity": "Boundless Oppurtunity"
 }
