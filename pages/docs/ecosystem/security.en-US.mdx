@@ -1,0 +1,38 @@
+# Security
+<img width="1000" src= "https://user-images.githubusercontent.com/109503546/208098525-d55007cd-0d2f-4970-a199-074fe3ee14fd.png" />
+
+When it comes to DeFi, the most important base layer and one which is often overlooked by the masses is security. Without a bulletproof foundation that has been put through rigorous testing, users are exposed to elevated risk factors that compromise safety and adoption. At Beethoven X, we prioritize security as a fundamental, and as such we have invested heavily in any action that bolsters security for our users.
+
+## Audits
+
+Beethoven X uses Balancer V2 contracts verbatim, which have completed [several full audits](https://docs.balancer.fi/core-concepts/security/audits). 
+
+We have also completed a Beethoven X specific audit with one of the most highly regarded Audit firms in DeFi - [Trail of Bits](https://www.trailofbits.com) . You can read the full audit [here](https://github.com/trailofbits/publications/blob/master/reviews/BeethovenXSummary.pdf).
+
+
+## Bug Bounties
+
+As a community, Beethoven X has been an active contributor to the Balancer Labs Bug Bounty programme; one of the [largest bug bounties](https://immunefi.com/bounty/balancer/) in DeFi valued up to $1,000,000. 
+
+On top of the efforts made by Balancer, we have also run our own Bug Bounty initiative up to a maximum value of $500,000. Our protocol uses more than the contracts that are covered by the Balancer program and as such it only makes sense for us to further incentive the security of the platform. For more information, check out this [article](https://medium.com/beethoven-x/beethoven-x-bug-bounty-program-33f41da42779).
+
+## Contracts
+
+All contracts are immutable and not upgradable. 
+
+Balancer V2 uses an authorization mechanism which allows fine grained access control on a function level. At its core is the [Authorizer](https://ftmscan.com/address/0x974D3FF709D84Ba44cde3257C0B5B0b14C081Ce9) contract which manages access to all protected function calls.
+
+## Execution roles
+
+All entities which are granted the default admin role can grant and revoke execution roles on a function level. For singleton contracts like the Vault, all roles granted on it are bound to its contract address. So if we would deploy another Vault contract, roles granted on the 'old' Vault would not apply on the new one. 
+
+For contracts deployed via a factory like the pools, roles are bound to all pools created by the same factory address. So if a role is granted on a StablePool created by the StablePoolFactory contract, then the role applies to all other StablePools created by this factory. It's bound to the StablePoolFactory address. 
+
+So if we were to deploy another StablePoolFactory, pools created by it would not share the same access roles.
+
+Currently, all roles are only granted to the [Balancer Admin multisig](https://safe.fantom.network/#/safes/0x9d0327954009C59eD70Dc98b7726e911879d4D92)
+
+
+## Default admin role
+
+The default admin role does not give permission to execute any protected function but allows granting or revoking roles to other entities (or himself).
