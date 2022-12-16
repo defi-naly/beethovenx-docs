@@ -1,4 +1,5 @@
 { 
   "home": "Home",
-  "liquidityproviders": "Liquidity Providers"
+  "liquidityproviders": "Liquidity Providers",
+  "protocol-fees": "Protocol Fees"
 }
