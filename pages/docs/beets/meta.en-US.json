@@ -1,4 +1,7 @@
 {
   "tokenomics": "Tokenomics",
-  "launch": "BEETS Launch"
+  "launch": "BEETS Launch",
+  "fbeets": "fBEETS",
+  "gauge": "Gauge Vote",
+  "reliquary": "Reliquary"
 }
