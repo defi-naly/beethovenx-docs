@@ -12,8 +12,8 @@
         "title": "Learn",
         "type": "page"
     },
-    "blog": {
-        "title": "Blog",
+    "join": {
+        "title": "Join",
         "type": "page",
         "theme": {
             "sidebar": false
