@@ -15,8 +15,5 @@
     "join": {
         "title": "Join",
         "type": "page",
-        "theme": {
-            "sidebar": false
-        }
     }
 }
