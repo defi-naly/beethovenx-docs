@@ -1,4 +1,6 @@
 {
+  "wallets": "Wallets & Vesting Contracts",
+  "transactions": "Transactions",
   "deployments": "Deployments",
   "subgraphs": "Subgraphs",
   "pool-verfication": "Pool Verification"
