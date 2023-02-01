@@ -7,16 +7,6 @@
     "docs": {
         "title": "Docs",
         "type": "page"
-    },
-    "learn": {
-        "title": "Learn",
-        "type": "page"
-    },
-    "join": {
-        "title": "Join",
-        "type": "page",
-      "theme": {
-      "sidebar": false
     }
   }
 }
