@@ -1,10 +1,10 @@
 {
-  "index": {
-    "type": "page",
-    "title": "Imagine",
+    "index": {
+        "type": "page",
+        "title": "Imagine"
+    },
+    "docs": {
+        "type": "page",
+        "title": "Documentation"
     }
-  },
-  "docs": {
-    "type": "page",
-    "title": "Documentation"
-  }
+}
