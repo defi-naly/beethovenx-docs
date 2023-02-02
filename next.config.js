@@ -10,12 +10,12 @@ module.exports = withNextra({
         locales: ['en-US'],
         defaultLocale: 'en-US',
     },
-    redirects: () => {
+    async redirects() {
         return [
             {
                 source: '/',
                 destination: '/defi-reimagineered/imagine',
-                statusCode: 301,
+                permanent: true,
             },
         ];
     },
