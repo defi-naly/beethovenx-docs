@@ -1,10 +1,10 @@
 {
-    "index": {
-        "type": "page",
-        "title": "Imagine"
-    },
-    "docs": {
-        "type": "page",
-        "title": "Documentation"
-    }
+    "defi-reimagineered": "DeFi Re-imagineered",
+    "limitless-flexibility": "Limitless Flexibility",
+    "boundless-opportunity": "Boundless Oppurtunity",
+    "beets": "BEETS", 
+    "ecosystem": "Ecosystem",
+    "dao": "Beethoven X DAO",
+    "technicals": "Technicals",
+    "faq": "FAQs"
 }
