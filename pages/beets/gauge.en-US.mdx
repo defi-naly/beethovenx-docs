@@ -2,18 +2,33 @@
 _Rewarding participation for users. Efficient incentives for protocols._
 ![Beets wars](https://user-images.githubusercontent.com/109503546/208073153-bded6fbf-e57a-40b1-a367-7355e8955aa1.jpeg)
 
-The gauge vote is an efficient mechanism for directing BEETS emissions to Liquidity Pools on the Fantom DEX. Users who hold Beethoven X’s governance token, fBEETS, unlock the ability to participate in a vote to determine which specific pools 30% of the BEETS emissions flow to every two weeks. 
+The gauge vote is an efficient mechanism for directing BEETS emissions to Liquidity Pools on the Fantom DEX. Users who hold Beethoven X’s governance token, fBEETS, unlock the ability to participate in a vote to determine which specific pools 50% of the BEETS emissions flow to every two weeks. 
 
-Protocols/DAOs offer gauge incentives for users to vote for their pools, users can then vote on snapshot and claim these rewards every two weeks. Since the implementation of BIP-24, Beethoven X also offers Gauge Bounties for users to vote for pools deemed as ‘core pools’. The Gauge vote unlocks a capital-efficient mechanism for protocols/DAOs to incentivize their own pool, as Gauge incentives historically yield a positive ROI on $ in emissions/ $ bribed.
+Protocols/DAOs offer gauge bounties for users to vote for their pools, users can then vote on snapshot and claim these rewards every two weeks. The Gauge vote unlocks a capital-efficient mechanism for protocols/DAOs to incentivize their own pool, as Gauge bounties historically yield a positive ROI on $ in emissions/ $ bribed. 
+
+## Protocol Bounties and Gauge Caps
+![FlxWQT2XEAIRXEn](https://user-images.githubusercontent.com/109503546/216949877-bf9b25d1-68b2-4dac-821b-014377d62a67.jpeg)
+
+Since the implementation of BIP-24, Beethoven X also offers Gauge Bounties for users to vote for Gauge pools that actively contribute to more than 2% of the previous month's protocol fees. Gauge Pools contributing to less than 2% of the month's previous Fantom protocol fees will are capped at 1% of the vote allocation.
+
+This mechanism aims to ensure the protocol continues towards its mission of longevity and sustainability.
+
+| Pools contribution to previous months Fantom protocol fees | Cap placed on Pool | Max % of Gauge vote  | Protocol bounty |
+| ---------------------------------------------------------- | ------------------ | ---------------------------- | --------        | 
+| <2% | Yes | 1% | No | 
+| >2% | No  | 100% | Yes |
+
+The bounties that these pools receive are calculated as a weighted average of their contribution towards protocol fees * total beets that flow to fBEETS holders as gauge incentives. (As shown in [protocol fees](https://docs-beta.beets.fi/ecosystem/protocol-fees))
+
 
 ## How does it work?
 
-* 30% of the BEETS farm emissions are decided by the fBEETS gauge vote bi-weekly. The remaining 70% of the emissions are distributed as base farm weights.
+* 50% of the BEETS farm emissions are decided by the fBEETS gauge vote bi-weekly. The remaining 50% of the emissions are distributed as base farm weights.
 * Voting takes place via Snapshot as a weighted vote. fBEETS in the wallet or staked on BeethovenX qualify.
 * Voting begins every other Thursday, a wallet snapshot takes place randomly within a week of the vote.
 * Protocols / DAOs announce their gauge incentives, these are shared on the Beethoven X discord and Twitter. 
 * Users select the pool they would like to vote for on Snapshot. 
-* Users earn a percentage of gauge incentives in correlation to the percentage of their votes on that pool.
+* Users earn a percentage of gauge incentives in correlation to the ratio of their vote within the pool they voted for.
 * Gauge incentives will either be airdropped into users wallets or claimed via third party sites.
 * The following Wednesday, the updated farm emissions go live. 
 
@@ -24,14 +39,13 @@ _The fBEETS pool's emission percentage is fixed at 33.33% and will not be part o
 _5% of BEET emissions are reserved for bonding._
 
 ## What are the requirements to add a pool to the gauge?
+
 Community pools can be requested to add to the gauge vote, provided the following requirements are met:
 
-* TVL above 50k.
-* The maximum weight discrepancy of the pool is 80/20. 
-* The pool must be either permissionless or be owned by the multisig (0xCd983793ADb846dcE4830c22F30C7Ef0C864a776).
-* Tokens included in the pool must be “legit” (well distributed, no transfer tax, etc).
-* The BPT contract needs to be verified (see Pool Verification).
-* Community pools must receive at least 0.15% of the vote before weight is assigned.
+* TVL above 20k.
+* The maximum weight discrepancy of the pool is 80/20.
+* Pool must be owned by the Beethoven multi-sig (0xCd983793ADb846dcE4830c22F30C7Ef0C864a776), this is the default owner when creating a pool through the UI
+* The BPT contract needs to be verified (see Pool Verification in docs).
 
 ## Useful third-party Sites
 [Beets Wars](https://www.beetswars.live/)
