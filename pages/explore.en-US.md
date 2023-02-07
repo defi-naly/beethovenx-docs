@@ -1,5 +1,4 @@
-#  Explore 
- _A new world to explore right under your feet. Vienna has never been so close._ 
+#  A new world to explore right under your feet 
 ![Ff6jvWaWQAItUJ7](https://user-images.githubusercontent.com/109503546/216957546-835acb49-c2e5-4434-940c-8fe005e3fd3f.jpeg)
 
 ### dAPP 
