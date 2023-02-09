@@ -115,8 +115,6 @@ export default {
     feedbackLabels: 'feedback',
     logo: () => <Logo height={56} />,
     head: ({ title, meta }) => {
-        const { route } = useRouter();
-
         const ogImage = meta.image || '/doxMatrix1.5x.png';
 
         return (
@@ -149,7 +147,7 @@ export default {
                 <meta name="twitter:image" content={ogImage} />
                 <meta name="og:title" content={title ? title + ' – BeethovenX Docs' : 'BeethovenX - Docs'} />
                 <meta name="og:image" content={ogImage} />
-                <meta name="apple-mobile-web-app-title" content="BeethovenX" />
+                <meta name="apple-mobile-web-app-title" content="BeethovenX Docs" />
             </>
         );
     },
