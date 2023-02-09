@@ -113,10 +113,7 @@ export default {
         return FEEDBACK_LINK_WITH_TRANSLATIONS[locale] || FEEDBACK_LINK_WITH_TRANSLATIONS['en-US'];
     },
     feedbackLabels: 'feedback',
-    logo: () => {
-        const { locale } = useRouter();
-        return <Logo height={56} />;
-    },
+    logo: () => <Logo height={56} />,
     head: ({ title, meta }) => {
         const { route } = useRouter();
 
