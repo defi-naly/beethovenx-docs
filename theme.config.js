@@ -117,9 +117,7 @@ export default {
     head: ({ title, meta }) => {
         const { route } = useRouter();
 
-        const ogImage =
-            meta.image ||
-            `https://swr-card.vercel.app${/\/index\.+/.test(route) ? '' : '?title=' + encodeURIComponent(title)}`;
+        const ogImage = meta.image || '/doxMatrix1.5x.png';
 
         return (
             <>
@@ -147,11 +145,11 @@ export default {
                     }
                 />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@vercel" />
+                <meta name="twitter:site" content="@beethoven_x" />
                 <meta name="twitter:image" content={ogImage} />
-                <meta name="og:title" content={title ? title + ' – SWR' : 'SWR: React Hooks for Data Fetching'} />
+                <meta name="og:title" content={title ? title + ' – BeethovenX' : 'BeethovenX: Knowledge Central'} />
                 <meta name="og:image" content={ogImage} />
-                <meta name="apple-mobile-web-app-title" content="SWR" />
+                <meta name="apple-mobile-web-app-title" content="BeethovenX" />
             </>
         );
     },
