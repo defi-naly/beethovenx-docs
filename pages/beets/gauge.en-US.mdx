@@ -10,7 +10,7 @@ Protocols/DAOs offer gauge bounties for users to vote for their pools, users can
 ## Protocol Bounties and Gauge Caps
 ![FlxWQT2XEAIRXEn](https://user-images.githubusercontent.com/109503546/216949877-bf9b25d1-68b2-4dac-821b-014377d62a67.jpeg)
 
-Since the implementation of BIP-24, Beethoven X also offers Gauge Bounties for users to vote for Gauge pools that actively contribute to more than 2% of the previous month's protocol fees. Gauge Pools contributing to less than 2% of the month's previous Fantom protocol fees will are capped at 1% of the vote allocation.
+Since the implementation of BIP-24, Beethoven X also offers Gauge Bounties for users to vote for Gauge pools that actively contribute to more than 2% of the previous month's protocol fees. Gauge Pools contributing to less than 2% of the month's previous Fantom protocol fees are capped at 1% of the vote allocation.
 
 This mechanism aims to ensure the protocol continues towards its mission of longevity and sustainability.
 
@@ -38,8 +38,6 @@ Pools that receieve more than 1% of the vote while being capped will have their 
 
 _The fBEETS pool's emission percentage is fixed at 33.33% and will not be part of the gauge vote._
 
-_5% of BEET emissions are reserved for bonding._
-
 ## What are the requirements to add a pool to the gauge?
 
 Community pools can be requested to add to the gauge vote, provided the following requirements are met:
@@ -47,7 +45,9 @@ Community pools can be requested to add to the gauge vote, provided the followin
 * TVL above 20k.
 * The maximum weight discrepancy of the pool is 80/20.
 * Pool must be owned by the Beethoven multi-sig (0xCd983793ADb846dcE4830c22F30C7Ef0C864a776), this is the default owner when creating a pool through the UI
-* The BPT contract needs to be verified (see Pool Verification in docs).
+* The BPT contract needs to be verified (see [Pool Verification](https://docs-beta.beets.fi/technicals/pool-verification))
+* Community pools must receive at least 0.15% of the vote before weight is assigned.  
+* The liquidity committee reserves the right to reject a pool for any reason and to kill any pool’s allocation if deemed malicious
 
 ## Useful third-party Sites
 [Beets Wars](https://www.beetswars.live/)
