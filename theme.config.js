@@ -145,9 +145,9 @@ export default {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@beethoven_x" />
                 <meta name="twitter:image" content={ogImage} />
-                <meta name="og:title" content={title ? title + ' – BeethovenX Docs' : 'BeethovenX - Docs'} />
+                <meta name="og:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
                 <meta name="og:image" content={ogImage} />
-                <meta name="apple-mobile-web-app-title" content="BeethovenX Docs" />
+                <meta name="apple-mobile-web-app-title" content="Beethoven X Docs" />
             </>
         );
     },
