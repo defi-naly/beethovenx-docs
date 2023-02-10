@@ -1,0 +1,31 @@
+# Smart Order Router
+![yelow-sub-OP1](https://user-images.githubusercontent.com/109503546/217849890-65822963-bc4d-4a02-8cd8-0b162410ae3e.png)
+
+
+Fast. Smart. Efficient. Optimal trades at your fingertips.
+
+Given that the main goal for a DEX is to facilitate swaps for traders, the SOR becomes an important piece to the Balancer V2 puzzle as it is responsible for sourcing the best possible price for a given asset on the protocol. The SOR finds the optimal path for a trade to take place, whether that is a direct swap in one pool or a combination of trades hopping through multiple pools. Traders can relax, as the SOR sources optimal prices for swaps on the DEX.
+
+## How does it work?
+
+We can think about how the SOR works in the following steps:
+
+* The SOR first sources all the possible candidate pathways available on the protocol for a given trade.
+* The SOR then prioritizes these pathways to account for the trade routes that pass through the liquidity pools on the protocols with the deepest liquidity.
+* The SOR will then employ an optimization mechanism across all the selected pools to find the most optimal trade route resulting in the best overall execution of price. This step takes into account pool slippage and gas costs.
+* Finally, the SOR sends the optimized swap steps to the Vault as a batch swap where it will be automatically executed.
+
+To source the best price for a trader, the SOR is designed to create an arbitrage-free state between the paths that it uses. To achieve this, each time the SOR routes through a particular path it needs to leave the same spot price for an asset after the swap has been completed. This means there is no price discrepancy and therefore no arbitrage opportunity.  
+
+Consistent with the theme of flexibility, the SOR is also designed to adapt to the growth of the protocol. As the variety of pools on the protocol expands so too does the SOR. This ensures that all of the pools on the protocol are integrated with the Vault, and as such can benefit from the collective liquidity on the protocol. 
+
+## Key Benefits
+
+### Intelligent and agile
+The SOR finds the best possible path to execute a given trade. Whether a direct swap or a combination of trades, the SOR will find the optimal route. Traders can relax as the Smart Order Routers ensure they always receive the best available price for trades.
+
+### Interconnected liquidity
+As the number of pools on the protocol expands so too does the liquidity the SOR can route through. Every pool on the protocol can support trades, and as such, any new pool built inherits the ability to seamlessly utilize all of the protocol's liquidity through the SOR.
+
+### Unrivaled efficiency 
+Every time a new pool is utilized within a swap, there are incremental gas costs. The SOR intelligently sources the cumulative gas costs and only executes if the price difference makes up for the addition of gas. Every trade on Beethoven X takes the most efficient route. 
