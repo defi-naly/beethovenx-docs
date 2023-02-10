@@ -7,9 +7,9 @@ Unlike other DEXs that manage assets across multiple contracts on their protocol
 
 ## How does it work?
 The vault achieves this innovative functionality by separating the AMM logic from the token management and accounting. Since the pool contracts no longer need to actively manage their assets (The Vault does) a degree of simplicity is achieved that facilitates new pool development and innovation. Anyone is now able to plug into the vault's existing liquidity. As such, pools inherit the ability to be fully customizable; developers can now easily build specialized pool constructs that are innovative and tailor-made to meet the demands of the market. The Vault unlocks a truly welcoming and builder-friendly environment. 
+
 ![image](https://user-images.githubusercontent.com/109503546/218033601-df14bd86-9c41-4f02-a32a-2a7d5c741dc3.png)
 
-![unnamed](https://user-images.githubusercontent.com/109503546/207652111-a5693053-d4fb-4ca6-93a7-689af452791e.png)
 This Vault is also the interface that allows for multi-hop, gas-efficient trading. Normally, each pool on a DEX is its own entity (contract) that holds and accounts for its own tokens. This means that if a user wants to trade between multiple pools, the assets need to be transferred from pool to pool. Multi-hop trading is inefficient and costly. The Vault solves this issue. As all of the tokens are stored within a single contract, the Vault keeps an internal record of which Pool is holding what and then performs a batch swap against multiple pools at the end of the transaction. Only the final amount of tokens is transferred to and from the vault resulting in a significantly more efficient, cost-effective process. 
 
 ## Key benefits
