@@ -3,14 +3,14 @@
 
 Deep Liquidity. Low slippage. Seamless swaps.
 
-Flexible. Adaptable. Unshackled by the confines of a singular AMM, Beethoven X utilizes the best of the best for every situation. Stable Pools are an essential primitive within DeFi. Whether trading or investing, stable assets are a necessity. Users using Beethoven X can rest assured their stable assets will trade seamlessly at the most efficient rates and the most effective yields.
+Flexible. Adaptable. Unshackled by the confines of a singular AMM, Beethoven X utilizes the best of the best for every situation. Stable Pools are an essential primitive within DeFi. Whether trading or investing, stable assets are a necessity. Users using Beethoven X can rest assured their stable assets  trade seamlessly at the most efficient rates.
 
 ## How do they work?
 Unlike weighted pools, stable pools are expected to consistently trade near parity. Therefore, a far more efficient design is the StableSwap AMM as popularized by Curve. This design allows pools to route far larger trades with far less significant price impact. Prices are determined by the pool balances, the amplification parameter (A), and amounts of the tokens that are being swapped. 
 
-Ideally stable assets would trade constantly 1:1. This would utilize a linear, or Constant Sum curve. However, if one of the tokens within the pool was to lose peg and diverge from the stable value the underlying math would cause the pool to drain completely. Therefore, there is a need for the pool to adapt to trading rules for uncorrelated assets in the event of a divergence. The most efficient design for this would be the Constant Product curve. 
+Ideally stable assets would trade constantly 1:1. This would utilize a linear, or Constant Sum curve. However, if one of the tokens within the pool was to lose peg and diverge from the stable value, the underlying math would cause the pool to drain completely. Therefore, there is a need for the pool to adapt to trading rules for uncorrelated assets in the event of a divergence. The most efficient design for this would be the Constant Product curve. 
 
-Stable math combines both of these curves to facilitate efficient low slippage traders that are capable to adapting to large price changes. The amplification parameter, A,  defines the degree to which the Stable Math curve approximates the Constant Product curve. Stable Math approximates the Constant Product curve (when A=0) or the Constant Sum curve (when A→∞). 
+Stable math combines both of these curves to facilitate efficient low slippage traders that are capable to adapting to large price changes. The amplification parameter, A, defines the degree to which the Stable Math curve approximates the Constant Product curve. Stable Math approximates the Constant Product curve (when A=0) or the Constant Sum curve (when A→∞). 
 
 <img src="https://user-images.githubusercontent.com/109503546/207655189-8a41d1cd-c3b1-4f1e-9b89-17671c08e51c.gif" width="500" />
 
