@@ -73,7 +73,7 @@ export default {
     feedbackLabels: 'feedback',
     logo: () => <Logo height={56} />,
     head: ({ title, meta }) => {
-        const ogImage = meta.image || 'https://docs.beets.fi/doxMatrix1.5x.png';
+        const ogImage = meta.image || '/doxMatrix1.5x.png';
 
         return (
             <>
@@ -94,6 +94,8 @@ export default {
                         'Innovation meets imagination. Beethoven X is a next generation decentralized investment platform built for the future of finance. Leveraging the most advanced technology in the industry, we provide innovative, capital-efficient, and sustainable solutions for all DeFi users.'
                     }
                 />
+                <meta name="thumbnail" content="/doxMatrix1.5x.png" />
+
                 <meta
                     name="og:description"
                     content={
