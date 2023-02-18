@@ -73,7 +73,7 @@ export default {
     feedbackLabels: 'feedback',
     logo: () => <Logo height={56} />,
     head: ({ title, meta }) => {
-        const ogImage = meta.image || '/doxMatrix1.5x.png';
+        const ogImage = meta.image || 'https://docs.beets.fi/doxMatrix1.5x.png';
 
         return (
             <>
@@ -84,6 +84,7 @@ export default {
                 <link rel="manifest" href="/favicon/site.webmanifest" />
                 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
                 <meta name="msapplication-TileColor" content="#ffffff" />
                 <meta httpEquiv="Content-Language" content="en" />
                 <meta
@@ -100,11 +101,20 @@ export default {
                         'Innovation meets imagination. Beethoven X is a next generation decentralized investment platform built for the future of finance. Leveraging the most advanced technology in the industry, we provide innovative, capital-efficient, and sustainable solutions for all DeFi users.'
                     }
                 />
+                <meta name="og:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
+                <meta name="og:image" content={ogImage} />
+
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@beethoven_x" />
                 <meta name="twitter:image" content={ogImage} />
-                <meta name="og:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
-                <meta name="og:image" content={ogImage} />
+                <meta property="twitter:domain" content="docs.beets.fi" />
+                <meta property="twitter:url" content="https://docs.beets.fi" />
+                <meta name="twitter:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
+                <meta
+                    name="twitter:description"
+                    content="Innovation meets imagination. Beethoven X is a next generation decentralized investment platform built for the future of finance. Leveraging the most advanced technology in the industry, we provide innovative, capital-efficient, and sustainable solutions for all DeFi users."
+                />
+
                 <meta name="apple-mobile-web-app-title" content="Beethoven X Docs" />
             </>
         );
