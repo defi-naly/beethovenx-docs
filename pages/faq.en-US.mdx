@@ -1,10 +1,10 @@
 # FAQ
 
-**Why is the average APR in BEETS tab is much lower than the pool APR? Why am I not receiving the full reward?** 
+**Why is the average APR in BEETS tab is much lower than the pool APR? Why am I not receiving the full reward?**
 
 The APR of a pool consists of two parts, trading fee and beets reward, the beets reward could be only a small part, while the trading fee is compounded into the underlying assets in the pool automatically. Pools such as index pools are designed to be self-sustaining, so even without beets reward, they are attractive investment vehicles.
 
-**I cannot withdraw from a pool, the withdraw button is grayed out.** 
+**I cannot withdraw from a pool, the withdraw button is grayed out.**
 
 You would need to first unstake your liquidity token (BPTs) from the farm, go to the pool page, switch to withdraw on the farm tab located at bottom right. After you unstake, you can withdraw your liquidity from the pool
 
@@ -12,13 +12,13 @@ You would need to first unstake your liquidity token (BPTs) from the farm, go to
 
 In normal circumstances, you don't want to trade/swap them, instead, go to the pool page to withdraw your liquidity. For fBEETS, go to https://beets.fi/#/stake, switch to withdraw and follow the steps to unwind your position.
 
-**Why can't I see any rewards?** 
+**Why can't I see any rewards?**
 
 After investing in the pool, one needs to stake the liquidity token (BPTs) into the farm to receive BEETS rewards (or other token rewards for selected pools)
 
 **Can I participate in governance votes if my fbeets are in autocompounders?**
 
-No. Only fbeets in wallet or staked in BeethovenX would qualify for voting power. 
+No. Only fbeets in wallet or staked in BeethovenX would qualify for voting power.
 
 **Why do some tokens show missing price information and have a value of $0? Have I lost all my investment?**
 
@@ -26,53 +26,55 @@ No, this is a pricefeed issue, which might occur when a token has not been trade
 
 **Why are my transactions not going through?**
 
-Sometimes, the network becomees congested or the RPC server is overloaded. This is especially apparent during huge market movements. 
+Sometimes, the network becomees congested or the RPC server is overloaded. This is especially apparent during huge market movements.
 You can try to increase txn gas according to the gas estimate on https://ftmscan.com/gastracker
 
-It also helps to try some alternative RPCs, including 
-https://rpc.ankr.com/fantom/ 
+It also helps to try some alternative RPCs, including
+https://rpc.ankr.com/fantom/
 https://rpc.ftm.tools/ (which is a RPC aggregator, but depending on your region, sometimes it directs you to a bad RPC)
- 
+
 If your transaction has been stuck for a long time, reset your metamask and try again.
 
 **How do I change the swap fee % for the pool I composed?**
 
-It is generally better to create a new pool than change the swap fee. Since by default, its ownership would be under the team's gnosis wallet which require multiple approvals, time and effort to approve the changes. Please reach out to the team if you need more information. 
+It is generally better to create a new pool than change the swap fee. Since by default, its ownership would be under the team's gnosis wallet which require multiple approvals, time and effort to approve the changes. Please reach out to the team if you need more information.
 
 **How do I receive voting incentives?**
 
-Voting incentives will typically be airdropped to your wallet  3-4 days after the vote completes. 
+Voting incentives will typically be airdropped to your wallet 3-4 days after the vote completes.
 or, if the incentive is paid on https://votehoven.com/, you shall claim it there.
 
-If you don't recall who you voted for, you can check by loading the snapshot page for the vote and see your wallet at the top of the results list. 
-- If you don't, make sure your wallet that you voted with is connected.
+If you don't recall who you voted for, you can check by loading the snapshot page for the vote and see your wallet at the top of the results list.
+
+-   If you don't, make sure your wallet that you voted with is connected.
 
 Once you know who you voted for, you can check https://beetswars.live/ to see what the bribe is to be paid in and approximately how much to expect.
 
 If you want to know if your voting incentive was received, you can check your wallet by going to the site https://debank.com/
 
-1) Open your wallet (either by connecting it, or entering your address in the search bar)
-2) Click the history tab
-3) Filter by Fantom chain, by clicking the drop-down menu in the top right of history
-4) Airdrops will show up as "Received". Look for something you "Received" after the vote finished. 
-- Again, check http://beetswars.live/ to see what your bribe is going to be paid in 
-- Note that if you use a bridge, it will also likely show as a "Receive"
-- if you see a large value of some random shitcoin you don't recognize, ignore it. thats a scam
-5) after reading and following the above, if you have more questions ask in 🗳︲gauge-vote 
+1. Open your wallet (either by connecting it, or entering your address in the search bar)
+2. Click the history tab
+3. Filter by Fantom chain, by clicking the drop-down menu in the top right of history
+4. Airdrops will show up as "Received". Look for something you "Received" after the vote finished.
+
+-   Again, check http://beetswars.live/ to see what your bribe is going to be paid in
+-   Note that if you use a bridge, it will also likely show as a "Receive"
+-   if you see a large value of some random shitcoin you don't recognize, ignore it. thats a scam
+
+5. After reading and following the above, if you have more questions ask in 🗳︲gauge-vote
 
 **How to resolve pending txs?**
 
-🔁Reset metamask
-Go to metamask setting -> advanced -> reset
-reset metamask will only clear pending tx
+1. Reset metamask  
+   Go to metamask setting -> advanced -> reset
+   reset metamask will only clear pending tx
 
+2. After resetting metamask  
+   Re-do your tx, and check the gas price here https://ftmscan.com/gastracker
+   edit priority and max fee same as FTMScan show ( put the same number on priority and max fee )
 
-2️⃣ After resetting metamask 
-Re-do your tx, and check the gas price here  https://ftmscan.com/gastracker
-edit priority and max fee same as FTMScan show ( put the same number on priority and max fee )
-https://imgur.com/a/MFHtFYa
+![ftm scan](/images/ftmscan_metamask.png)
 
 **How do I bridge BEETS between Fantom and Optimism?**
 
-BEETS bridge is supported by multichain https://multichain.org/
-
+TBA
