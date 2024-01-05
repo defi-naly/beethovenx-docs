@@ -1,6 +1,5 @@
 {
-  "transactions": "Transactions",
-  "deployments": "Deployments",
-  "subgraphs": "Subgraphs",
-  "pool-verification": "Pool Verification"
-  }
+    "transactions": "Transactions",
+    "deployments": "Deployments",
+    "subgraphs": "Subgraphs"
+}
