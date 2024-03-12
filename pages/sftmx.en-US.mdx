@@ -1,28 +1,36 @@
 # sFTMx
 
-### What is sFTMX?
+### Overview of sFTMx on Beethoven X
 
-sFTMX is a liquid token that users get when they stake FTM with Beethoven X. The sFTMX tokens represent their staked FTM. They allow users to swap them at a later date for their staked FTM and accrued rewards with Beethoven X. As the FTM rewards get added, the value of sFTMX increases. Meanwhile, users are able to use it on multiple protocols on Fantom to participate in Defi opportunities.
+sFTMx is a liquid-staked token that users receive when they stake FTM on the Beethoven X platform. The value of sFTMx naturally appreciates in relation to FTM thanks to native network staking rewards automatically compounded within the token. This token seamlessly integrates with other DeFi applications, enabling users to utilize it across various protocols, including DEXs and lending markets.
 
 ### What are the top highlights of sFTMX?
 
--   **~4% APY**: sFTMx will deliver maximum staking rewards, typically reserved for 365 day lock-ins, while also allowing for instant liquidity on DEXs
--   **Max DeFi interoperability**: sFTMx’s cToken design allows for easy integration with all types of DeFi protocols — from DEXs to Lending/ Borrowing protocols to Yield Optimizers (from vaults to auto-compounders to leveraged yield farming). This means the staking rewards are only the beginning of sFTMx’s potential.
--   **Decentralization**: When you stake with Beethoven X, your assets are automatically distributed across a carefully chosen set of validators. This furthers Fantom decentralization while minimizing slashing risks.
+Access to Fantom Network staking rewards: sFTMx will deliver maximum staking rewards, typically reserved for 365 day lock-ins.
+Max DeFi interoperability: sFTMx’s cToken design allows for easy integration with all types of DeFi protocols — from DEXs to Lending/ Borrowing protocols.
+Decentralization: When you stake with Beethoven X, your assets are automatically distributed across a carefully chosen set of validators
 
-### How can I get sFTMX?
+### Staking and Unstaking
 
-Users can directly mint sFTMX on the [Beethoven X website](https://beets.fi/sftmx).
+To stake, users simply need to head to the sFTMx page and select how much FTM they wish to deposit. Unstaking takes 7 days, in line with the unbounding period for staking on Fantom. It’s also worth noting that when unstaking an amount outside which is available in the free pool, a penalty will be incurred. This deduction is automatically reflected in the numbers displayed on the UI. The free pool is a dynamic reserve of “to-be-staked” FTM that allows penalty-free unstaking. The pool is made up of new staking deposits, maturities, and accrued rewards.
 
-Users can also swap to get sFTMX at top DEXs like Spookyswap, Spiritswap, Beethoven X.
+As an alternative to unstaking, users can swap out of sFTMx on DEXs by swapping their sFTMX for FTM on the Swap Page.
 
-### Where can I use sFTMX?
+### How does sFTMx unlock Fantom staking rewards?
 
-We have worked on an extensive list of partnerships which support sFTMX. The spectrum of partners includes DEXs, yield farming, lending/borrowing and more. The following list of partners is live
+The sFTMx token accrues staking rewards via delegating the underlying FTM to trustworthy validators on the network. Validators are curated based on safety (no slashing history, community engagement, track record), and performance (100% uptime). Chosen Validators are required to max-relock underlying FTM delegations to 365 days to maximize sFTMx APYs.
 
-sFTMX liquidity pools on Spookyswap, Beethoven X and Wigo
-sFTMX lending/borrowing on Polter Finance and FMoney Market
-Many more to come!
+### What is the sFTMX exchange rate and how does it change?
+
+Beethoven X has inherited the sFTMx contract that’s exchange rate was initialized as 1 at the start of the contract. Every time staking rewards are added to the pool, the sFTMx exchange rate increases using the formula below:
+
+At the time of writing, 1 sFTMx = 1.1115 FTM
+
+### What are the sFTMx fees?
+
+Due to the management of underlying nodes, validators earn 15% of the overall FTM staking rewards. Beethoven X also takes a 10% protocol fee on the resultant rewards after the validator fees. The APY that is displayed on the UI is the APY the user receives (all fees have been subtracted automatically).
+
+It’s worth noting that a portion of all Beethoven X sFTMX protocol fees will be redirected to maBEETS holders as gauge bounties. This means that maBEETS holders unlock a continuous source of “real yield” via LST management fees, swap fees, and all Yield Bearing fees on the DEX.
 
 ### Has sFTMX been audited?
 
@@ -31,60 +39,8 @@ The FTM smart contracts developed by Stader have been audited by Peckshield and 
 -   [Peckshield](https://staderlabs.com/docs/fantom/StaderLabs%20Fantom%20Smart%20Contract%20audit%20report%20by%20PeckShield.pdf)
 -   [Halborn](https://staderlabs.com/docs/fantom/StaderLabs%20sFTMX%20Smart%20Contract%20Audit%20Report%20by%20Halborn.pdf)
 
-### What is the sFTMX exchange rate and how does it change?
+### What are the risks of staking?
 
-sFTMX exchange rate was initialized as 1 at the start of the contract. Every time staking rewards are added to the pool the sFTMX exchange rate will increase using the formula
+While Beethoven X has carefully selected and monitored validators, there exists a risk of one or more of the validators being slashed. To combat this, Beethoven X distributes staked FTM across multiple validators, minimizing the slashing impact arising from the actions of any individual validator.
 
-Exchange rate = CurrentRate + Total sFTMX / Rewards Added
-
-When users stake FTM, they will mint sFTMx at the prevailing exchange.
-
-### How can I enter the amount of FTM to Stake?
-
-You can manually enter the amount of FTM you would like to stake in the field provided. Please note that you must have enough FTM in balance to pay for the transaction.
-
-### How is the sFTMX output amount calculated?
-
-The output sFTMX is calculated as the FTM amount entered in the input field divided by the current sFTMX-FTM exchange rate.
-
-### What is the APY seen on the Beethoven X website?
-
-The APY shown on the Beethoven X Dapp is the annualized rate of rewards available via staking FTM tokens after auto-compounding of rewards and accounting for Beethoven X protocol fees.
-
-### How long does it take to stake and unstake?
-
-Users can stake immediately with Beethoven X and mint liquid token sFTMX. Unstaking takes 7 days, in line with the unbounding period in staking on Fantom. Users can however get instant liquidity on DEXs by swapping their sFTMX for FTM
-
-### Can I unstake my FTM with Beethoven X? Are there any penalties?
-
-Users can get instant liquidity on DEXs including Spookyswap, Spiritswap and Beethoven X
-
-Users can also unstake their FTM directly with Beethoven X and receive their FTM after a 7 days unbounding period. We have created a ‘Free pool’, a dynamic reserve made up of new staking deposits, maturities, and accrued rewards that are held for ~5 days on average before being staked. This ‘Free pool’ will allow for penalty-free unstaking.
-
-If a user’s unstake request exceeds the free pool, then a penalty would apply on unstaking which would make the FTM made available for withdrawal lower than what would be implied by the prevailing sFTMX-FTM exchange rate.
-
-### What fees does Beethoven X charge?
-
-Beethoven X charges a 10% commission on staking rewards earned as protocol fees. This commission is never applied to your staked FTM and is only applicable on earned staking rewards.
-
-Please note that the rewards APY on the dAPP is what will be received by users and already accounts for Beethoven X’s protocol fees.
-
-### How does Beethoven X select its validators?
-
-Beethoven X curates validators based on safety (no slashing history, community engagement, track-record), and performance (100% uptime). Also, given the design to provide high APY for users, we require validators to relock to 365 days on an ongoing basis at an agreed frequency leading to self-selection of long-term, committed validators.
-
-Beethoven X distributes stake received to the curated set of validators in a round robin manner leading to equitable distribution of delegations, subject to their maximum staking capacity (each validator can only take delegations upto a maximum of 15x their self-stake).
-
-### How is Beethoven X secure?
-
-Beethoven X is a secure liquid staking solution. We do continuous review and testing of all code. We perform regular audits of smart contracts by external auditors. We use Multisig admin accounts for changing smart contract parameters.
-
-### What are the risks of staking with Beethoven X?
-
-There exist some risks when staking FTM using liquid staking protocols.
-
--   **Smart contract risk**: Although the Beethoven X code is thoroughly vetted and audited there exists a possibility of malicious users exploiting a vulnerability or a bug in the contract or the FTM platform
--   **Slashing risk**: While Beethoven X carefully selects and monitors validators, there exists a risk of one or more of the validators being slashed. Beethoven X also automatically distributes staked assets across multiple validators and this minimizes slashing impact arising from the actions of any individual validator.
--   **Wallet and downstream apps**: Wallets and third party apps may have to be used to access staking, users should evaluate the security of the wallets and other third party apps independently, Beethoven X does not hold any responsibility for the security of the wallets or third party applications used in staking platform
-
-The Beethoven X team is committed to delivering the best and most secure staking experience for users.
+Although the sFTMx code is thoroughly vetted and audited there is also always smart contract risk present. There always exists the possibility of malicious users exploiting a vulnerability or a bug in the contract.
