@@ -3,55 +3,38 @@ Sustainable revenue generation. Innovative yield.
 
 Fees lay the foundations for a healthy and prosperous ecosystem. Not only do they unlock an avenue for Liquidity Providers to earn yield, they are a fundamental revenue source for the protocol.
 
-At Beethoven X, we are uniquely positioned in our ability to generate protocol revenue due to an innovative mechanism that is independent of swap fees. Through interest bearing yield we can also generate a sustainable source of revenue from yield-bearing assets. 
+At Beets, we are uniquely positioned in our ability to generate protocol revenue due to an innovative mechanism that is independent of swap fees. Through interest bearing yield we can also generate a sustainable source of revenue from yield-bearing assets. 
 
 
 ### Swap Fees
-Every time a trade takes place on the protocol, a swap fee is denominated in the pool's respective BPT. Each pool has its own swap fee uniquely set based on the underlying assets and AMM logic being used. A portion of these fees flow to liquidity providers and the other portion flows to Beethoven X. 
+Every time a trade takes place on the protocol, a swap fee is denominated in the pool's respective BPT. Each pool has its own swap fee uniquely set based on the underlying assets and AMM logic being used. A portion of these fees flow to liquidity providers and the other portion flows to Beets. 
 
-The protocol sets a percentage fee to be taken from the total amount of swap fees collected on the protocol. This percentage fee is currently different for Fantom, compared to Optimism.
+The protocol sets a percentage fee to be taken from the total amount of swap fees collected on the protocol. This percentage fee is currently different for the different networks.
 
 ### Interest bearing Fees
-On any IB token deposited into a Liquidity Pool on the DEX, Beethoven X takes a fee on the yield generated. 
+On any IB token deposited into a Liquidity Pool on the DEX, Beets takes a fee on the yield generated. 
 This innovative protocol fee ensures a sustainable source of protocol revenue that is purely a function of TVL; no longer is the protocol dependent on swap volume to ensure longevity. 
 
-This is unique to Beethoven X and Balancer, no other DEXs have the flexibility to utilize this mechanism. 
+This is unique to Beets and Balancer, no other DEXs have the flexibility to utilize this mechanism. 
 
-Like swap fees, this interest bearing fee is applicable to both Fantom and Optimism.
+Like swap fees, this interest bearing fee is applicable to all networks Beets is deployed.
 
 ### Flash Loan Fee
 
 A small fee is collected as interest if users utilise a flashloan on the protocol. 
 
-### Summary of Protocol Fees on Fantom and Optimism 
-On both Fantom and Optimism, the percentage of the total fee that flows to the protocol is taken in different proportions. You can see the breakdown of fees below:
+### Summary of Protocol Fees on Fantom, Sonic and Optimism
+On all chains, the percentage of the total fee that flows to the protocol is taken in different proportions. You can see the breakdown of fees below:
 
-| Fee type   | Protocol Fee on Fantom | Protocol Fee on Optimism |
-| --------   | ---------------------- | ------------------------ |
-| Swaps      | 25% | 50% (Half goes to Balancer) |
-| IB Yield   | 25% | 50% (Half goes to Balancer) |
-| Flash loan | 0.03% | 0% |
+| Fee type   | Protocol Fee on Fantom | Protocol Fee on Sonic | Protocol Fee on Optimism |
+| --------   | ---------------------- | ------------------------ | - |
+| Swaps      | 50% | 25% | 50% (Half goes to Balancer) |
+| IB Yield   | 50% | 25% | 50% (Half goes to Balancer) |
+| Flash loan | 0.03% | 0.03% |  0% |
 
 _Protocol fees are collected in contracts known as the Protocol Fee Collector and are separated by chain. The contracts for Fantom can be found [here](https://ftmscan.com/address/0xc6920d3a369e7c8bd1a22dbe385e11d1f7af948f) and Optimism [here](https://optimistic.etherscan.io/address/0xce88686553686da562ce7cea497ce749da109f9f)._
 
 ## Protocol Fee Distribution
-Protocol fees are distributed on a monthly basis and are shared differently on each chain according to the following distribution model:
-
-### Fantom
-
-| Distribution | Allocation |
-| ------------ | ---------- |
-| Treasury | 70% |
-| Gauge incentives for maBEETS holders| 30% |
-
-### Optimism 
-| Distribution | Allocation |
-| ------------ | ---------- |
-| Balancer | 17.5% |
-| OP Grant matching | 65% |
-| Treasury (veBal, vlAura, auraBAL) | 10% |
-| Gauge incentives for maBEETS holders| 7.5% |
-
-_Since the approval of [BIP-28](https://snapshot.org/#/beets.eth/proposal/0x3d6e0373f0f1c041a82e6108a01aee2e00a21be43667259126b70e5fd2a5f93a) fees sent to the treasury are bridged to the Ethereum network to be evenly split towards the purchase of veBAL, auraBAL, and vlAURA on a monthly basis._
+Protocol fees are managed based on the Quarterly Budget.
 
 

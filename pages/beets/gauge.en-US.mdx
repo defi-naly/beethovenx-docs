@@ -4,7 +4,7 @@
 
 Rewarding participation for users. Efficient incentives for protocols.
 
-The gauge vote is an efficient mechanism for directing BEETS emissions to Liquidity Pools on the Fantom DEX. Users who hold Beethoven X’s governance token, maBEETS, unlock the ability to participate in a vote to determine which specific pools 50% of the BEETS emissions flow to every two weeks.
+The gauge vote is an efficient mechanism for directing BEETS emissions to Liquidity Pools on the Fantom DEX. Users who hold Beethoven X’s governance token, maBEETS, unlock the ability to participate in a vote to determine which specific pools the BEETS emissions flow to every two weeks.
 
 Protocols/DAOs offer gauge bounties for users to vote for their pools, users can then vote on snapshot and claim these rewards every two weeks. The Gauge vote unlocks a capital-efficient mechanism for protocols/DAOs to incentivize their own pool, as Gauge bounties historically yield a positive ROI on $ in emissions/ $ bribed.
 
@@ -12,33 +12,22 @@ Protocols/DAOs offer gauge bounties for users to vote for their pools, users can
 
 ![FlxWQT2XEAIRXEn](https://user-images.githubusercontent.com/109503546/216949877-bf9b25d1-68b2-4dac-821b-014377d62a67.jpeg)
 
-Since the implementation of [BIP-24](https://snapshot.org/#/beets.eth/proposal/0xe1489639baffe5bb8117da677349a67e80197ab6d34d5efb1b49786ca76cf83a), Beethoven-X also offers gauge bounties for users to vote for gauge pools that significantly contribute to protocol fees. Currently, the threshold for protocol provided bounties is set at 2% of the previous month's Fantom protocol fees. Gauge Pools contributing to less than 2% of the month's previous Fantom protocol fees are capped at 1% of the vote allocation.
+Since the implementation of [BIP-24](https://snapshot.org/#/beets.eth/proposal/0xe1489639baffe5bb8117da677349a67e80197ab6d34d5efb1b49786ca76cf83a), Beets also offers gauge bounties for users to vote for gauge pools that significantly contribute to protocol fees. Currently, the threshold for protocol provided bounties is set at 1% of the previous epoch fees.
 
-This mechanism aims to ensure the protocol continues towards its mission of longevity and sustainability.
 
-| Pools contribution to previous months Fantom protocol fees | Cap placed on Pool | Max % of Gauge vote | Protocol bounty |
-| ---------------------------------------------------------- | ------------------ | ------------------- | --------------- |
-| Less than 2%                                               | No                | 100%                  | No              |
-| Greater than 2%                                            | No                 | 100%                | Yes             |
-
-The bounties that these pools receive are calculated as a weighted average of their contribution towards protocol fees \* total beets that flow to maBEETS holders as gauge incentives. (As shown in [protocol fees](https://docs-beta.beets.fi/ecosystem/protocol-fees))
-
-Pools that receieve more than 1% of the vote while being capped will have their additional votes directed at the [Music Directors](https://docs-beta.beets.fi/dao/music-directors) discretion.
+The bounties that these pools receive are calculated as a weighted average of their contribution towards protocol fees \* total beets that flow to maBEETS holders as gauge incentives.
 
 ## How does it work??
 
--   50% of the BEETS farm emissions are decided by the maBEETS gauge vote bi-weekly. The remaining 50% of the emissions are distributed as base farm weights.
--   Voting takes place via Snapshot as a weighted vote. You need maBEETS on BeethovenX to qualify.
+-   BEETS total emissions and distribution is set by the Quarterly Budget
+-   BEETS farm emissions are decided by the maBEETS gauge vote bi-weekly.
+-   Voting takes place via Snapshot as a weighted vote. You need maBEETS on Beets to qualify.
 -   Voting begins every other Thursday.
--   Protocols / DAOs announce their gauge incentives, these are shared on the Beethoven X discord and Twitter.
+-   Protocols / DAOs announce their gauge incentives, these are shared on the Beets discord and Twitter.
 -   Users select the pool they would like to vote for on Snapshot.
 -   Users earn a percentage of gauge incentives in correlation to the ratio of their vote within the pool they voted for.
 -   Gauge incentives will either be airdropped into users wallets or claimed via third party sites.
 -   The following Wednesday, the updated farm emissions go live.
-
-**Note**
-
-_The Fresh Beets pool's emission percentage is fixed at 33.33% and will not be part of the gauge vote._
 
 ## What are the requirements to add a pool to the gauge?
 
@@ -46,7 +35,7 @@ Community pools can be requested to add to the gauge vote, provided the followin
 
 -   TVL above 5k.
 -   The maximum weight discrepancy of the pool is 80/20.
--   Pool must be owned by the Beethoven multi-sig (0xCd983793ADb846dcE4830c22F30C7Ef0C864a776), this is the default owner when creating a pool through the UI
+-   Pool must be owned by the Beethoven multi-sig, this is the default owner when creating a pool through the UI
 -   The pool contract needs to be verified
 -   Community pools must receive at least 0.15% of the vote before weight is assigned.
 -   The liquidity committee reserves the right to reject a pool for any reason and to kill any pool’s allocation if deemed malicious
