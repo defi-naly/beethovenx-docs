@@ -1,0 +1,72 @@
+# Migration to Sonic
+
+As Fantom transitions to Sonic, Beethoven X evolves into BEETS, redefining its core mission and technical foundation. [Medium post](https://beethovenxio.medium.com/beets-2-0-the-sonic-revolution-91cfb609922b) outlines the migration process, technical updates and strategic focus.
+
+The following information should help users with migrating their assets to Sonic network.
+
+## BEETS
+
+BEETS can be migrated to Sonic using LayerZero's Stargate bridge. 
+After bridging, users can exchange their BEETS to the new Sonic native version at a 1:1 ratio. 
+
+The exchange will remain two-ways for 90 days, which also allows BEETS price to be similar on both chains for this time through arbitrage. After the 90 day period concludes, conversions will only be allowed to the new BEETS version.
+
+For migration, users will need to:
+
+1) Migrate their BEETS to Sonic using [LayerZero's Stargate bridge](https://stargate.finance/bridge?srcChain=fantom&srcToken=0xF24Bcf4d1e507740041C9cFd2DddB29585aDCe1e&dstChain=optimism&dstToken=0xb4Bc46bc6cB217B59ea8F4530BaE26Bf69F677f0).
+
+2) Convert their Fantom native BEETS to the new Sonic Native BEETS (link TBA).
+
+## maBEETS
+
+On Fantom maBEETS is a 80/20 LP with BEETS and wFTM. On Sonic maBEETS will transition to 80/20 LP with BEETS and stS (Sonic based LST managed by Beets).
+
+For migration, users will need to:
+
+1) Break their maBEETS position on Fantom to withdraw the proportional amounts of wFTM and BEETS.
+
+2) Bridge BEETS to Sonic via the method outlined above.
+
+3) Exchange wFTM for S (Sonic's native token) through Sonic Labs' mechanism (link TBA).
+
+4) Stake S for stS using the stS UI. (link TBA)
+
+5) Recreate the maBEETS position by pairing the bridged BEETS with stS (link TBA).
+
+## sFTMx 
+
+Since sFTMx cannot be directly migrated, users will need to unstake and withdraw from their $sFTMx position. 
+
+For migration to stS (The new Beets managed Sonic LST), users will need to:
+
+1) Unstake their sFTMx using the "Unstake" tab on the [sFTMx UI](https://beets.fi/sftmx).*
+
+2) Wait until the 24 hour unstaking period concludes and then withdraw the FTM using the "Withdraw" tab on the [sFTMx UI](https://beets.fi/sftmx).*
+
+3) Exchange wFTM for S (Sonic's native token) through Sonic Labs' mechanism (link TBA).
+
+4) Stake S for stS using the stS UI. (link TBA)
+
+*Alternatively instead step 1 and 2 users can directly swap the sFTMx to FTM on open market, but this may result in a less favorable rate compared to the standard unstaking process.
+
+## Fantom LPs and other Fantom assets
+
+To migrate any other asset to Sonic the users will need to use the methods provided by the corresponding projects. There is also no direct option to migrate the user owned LPs, users will need to break their LPs and migrate the underlying assets.
+
+While we advise to check each project directly for their migration paths, then here are the migration/bridging options for some more commonly used assets on Beets.
+
+### Migrating FTM on Fantom to S on Sonic
+
+Exchange wFTM for S (Sonic's native token) through Sonic Labs' mechanism (link TBA).
+
+### Wormhole bridged assets (USDC.e)
+
+Can be bridged to Ethereum mainnet using [Portal bridge](https://portalbridge.com/).
+
+### Axelar bridged assets (axlUSDC)
+
+Can be bridged to varios networks using [Squidrouter](https://app.squidrouter.com/).
+
+### LayerZero bridged assets (lzUSDC)
+
+Can be bridged to various networks using [PancakeSwap Stargate UI](https://bridge.pancakeswap.finance/stargate).
