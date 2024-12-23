@@ -8,7 +8,7 @@ DISCLAIMER: At the current state, only bridging FTM to S is available. Since mig
 
 ## FTM (Fantom) to S (Sonic)
 
-Migrating FTM to S will be available through official [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
+Migrating FTM to S is be available through official [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
 
 ## sFTMx 
 
@@ -20,40 +20,33 @@ For migration to stS (The new Beets managed Sonic LST), users will need to:
 
 2) Wait until the 24 hour unstaking period concludes and then withdraw the FTM using the "Withdraw" tab on the [sFTMx page](https://ftm.beets.fi/sftmx).*
 
-3) Exchange wFTM for S (Sonic's native token) through [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
+3) Upgrade FTM for S (Sonic's native token) through [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
 
 4) Stake S for stS using the [stS page](https://beets.fi/stake).
 
 *Alternatively instead step 1 and 2 users can directly swap the sFTMx to FTM on open market, but this may result in a less favorable rate compared to the standard unstaking process.
 
-## BEETS (Not yet available)
+## maBEETS and BEETS
 
-BEETS can be migrated to Sonic using LayerZero's Stargate bridge. 
-After bridging, users can exchange their BEETS to the new Sonic native version at a 1:1 ratio. 
+On Fantom maBEETS is a 80/20 LP with BEETS and wFTM. On Sonic maBEETS is transitioned to 80/20 LP with BEETS and stS (Sonic based LST managed by Beets).
 
-The exchange will remain two-ways for 90 days, which also allows BEETS price to be similar on both chains for this time through arbitrage. After the 90 day period concludes, conversions will only be allowed to the new BEETS version.
+BEETS can be migrated to Sonic using LayerZero's OFT contracts. While this should be available through Stargate bridge UI soon, then for the time being an alternate option is set up. To start the process, go to [Fantom maBEETS UI](https://ftm.beets.fi/mabeets).
 
-For migration, users will need to:
+The UI will guide the user through the following steps:
 
-1) Migrate their BEETS to Sonic using [LayerZero's Stargate bridge](https://stargate.finance/bridge?srcChain=fantom&srcToken=0xF24Bcf4d1e507740041C9cFd2DddB29585aDCe1e&dstChain=optimism&dstToken=0xb4Bc46bc6cB217B59ea8F4530BaE26Bf69F677f0).
+1) Break maBEETS position on Fantom to withdraw the proportional amounts of wFTM and BEETS.
 
-2) Convert their Fantom native BEETS to the new Sonic Native BEETS (link TBA).
+2) Bridge BEETS to Sonic, by which users will receive lzBEETS on Sonic network.
 
-## maBEETS (Not yet available)
+3) Unwrap their wFTM for FTM.
 
-On Fantom maBEETS is a 80/20 LP with BEETS and wFTM. On Sonic maBEETS will transition to 80/20 LP with BEETS and stS (Sonic based LST managed by Beets).
+4) Upgrade their FTM to S using Sonic through official [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
 
-For migration, users will need to:
+5) Stake S for stS using the [stS page](https://beets.fi/stake).
 
-1) Break maBEETS position on Fantom to withdraw the proportional amounts of wFTM and BEETS using the [FTM maBEETS page](https://ftm.beets.fi/mabeets).
+6) Migrate their lzBEETS to BEETS and create the maBEETS on Sonic on the [maBEETS UI](https://ma.beets.fi/).
 
-2) Bridge BEETS to Sonic via the method outlined above for BEETS.
-
-3) Exchange wFTM for S through [Sonic Labs' bridge](https://my.soniclabs.com/upgrade).
-
-4) Stake S for stS using the [stS page](https://beets.fi/stake).
-
-5) Recreate the maBEETS position by pairing the bridged BEETS with stS using the [Sonic maBEETS page](https://ma.beets.fi/).
+The migration will remain two-ways for 90 days, which allows BEETS to be migrated both ways at a 1:1 ratio. Through arbitrage opportunities this should guarantee BEETS price to be similar on both chains for that duration.
 
 ## Fantom LPs and other Fantom assets (Moving to Sonic not yet available)
 
