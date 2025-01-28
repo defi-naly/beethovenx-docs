@@ -7,34 +7,24 @@ When it comes to DeFi, the most important base layer and one which is often over
 
 Beets uses Balancer V2 contracts verbatim, which have completed [several full audits](https://docs.balancer.fi/core-concepts/security/audits). 
 
-We have also completed a Beets specific audit with one of the most highly regarded Audit firms in DeFi - [Trail of Bits](https://www.trailofbits.com) . You can read the full audit [here](https://github.com/trailofbits/publications/blob/master/reviews/BeethovenXSummary.pdf).
+We have also completed a Beets specific audit that verified the deployment on Fantom with one of the most highly regarded Audit firms in DeFi - [Trail of Bits](https://www.trailofbits.com) . You can read the full audit [here](https://github.com/trailofbits/publications/blob/master/reviews/BeethovenXSummary.pdf).
+The deployment on Sonic uses the canonical address of Balancer for the vaults which confirms that the exact same code was deployed than for the official Balancer V2 and V3 deployments.
+
+We have gone through two audits for Beets Staked Sonic, one with Spearbit and one with Trail of Bits. You can check them out here:
+-   [Spearbit](https://cantina.xyz/portfolio/71a6f59b-7533-4ae9-87c5-d1d1bf6d675a)
+-   [Trail of Bits](https://github.com/trailofbits/publications/blob/master/reviews/2025-01-beethovenx-sonicstaking-securityreview.pdf)
 
 
 ## Bug Bounties
 
-As a community, Beets has been an active contributor to the Balancer Labs Bug Bounty programme; one of the [largest bug bounties](https://immunefi.com/bounty/balancer/) in DeFi valued up to $1,000,000. 
+As a community, Beets has been an active contributor to the Balancer Labs Bug Bounty programm; one of the [largest bug bounties](https://immunefi.com/bounty/balancer/) in DeFi valued up to $1,000,000. 
 
-On top of the efforts made by Balancer, we have also run our own Bug Bounty initiative up to a maximum value of $500,000. 
+On top of the efforts made by Balancer, we have also run our own Bug Bounty initiative up to a maximum value of $200,000. 
 Our protocol uses more than the contracts that are covered by the Balancer program and as such it only makes sense for us to further 
-incentive the security of the platform. For more information, check out this [article](https://medium.com/beethoven-x/beethoven-x-bug-bounty-program-33f41da42779) or visit the [bug bounty program](https://immunefi.com/bounty/beethovenx/).
+incentive the security of the platform. For more information, visit the [bug bounty program](https://immunefi.com/bounty/beethovenx/).
 
 ## Contracts
 
 All contracts are immutable and not upgradable. 
 
-Balancer V2 uses an authorization mechanism which allows fine grained access control on a function level. At its core is the [Authorizer](https://ftmscan.com/address/0x974D3FF709D84Ba44cde3257C0B5B0b14C081Ce9) contract which manages access to all protected function calls.
-
-## Execution roles
-
-All entities which are granted the default admin role can grant and revoke execution roles on a function level. For singleton contracts like the Vault, all roles granted on it are bound to its contract address. So if we would deploy another Vault contract, roles granted on the 'old' Vault would not apply on the new one. 
-
-For contracts deployed via a factory like the pools, roles are bound to all pools created by the same factory address. So if a role is granted on a StablePool created by the StablePoolFactory contract, then the role applies to all other StablePools created by this factory. It's bound to the StablePoolFactory address. 
-
-So if we were to deploy another StablePoolFactory, pools created by it would not share the same access roles.
-
-Currently, all roles are only granted to the [Balancer Admin multisig](https://safe.fantom.network/ftm:0x9d0327954009C59eD70Dc98b7726e911879d4D92)
-
-
-## Default admin role
-
-The default admin role does not give permission to execute any protected function but allows granting or revoking roles to other entities (or himself).
+Balancer V2 uses an authorization mechanism which allows fine grained access control on a function level. At its core is the [Authorizer](https://sonicscan.org/address/0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5#code) contract which manages access to all protected function calls.
