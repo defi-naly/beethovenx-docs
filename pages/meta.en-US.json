@@ -1,11 +1,11 @@
 {
     "index": "Introduction",
-    "sonic": "Sonic Migration",
     "beets-dex": "Beets DEX",
     "sts": "Beets Staked S",
     "tokenommics": "Tokenomics",
     "dao": "Beets DAO",
     "technicals": "Technicals",
     "faq": "FAQs",
-    "operating-agreement": "OA"
+    "operating-agreement": "OA",
+    "sonic": "Sonic Migration"
 }
