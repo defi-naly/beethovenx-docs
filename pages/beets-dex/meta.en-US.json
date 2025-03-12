@@ -2,5 +2,7 @@
     "balancertech": "Balancer Technology",
     "pools": "Custom Pool Types",
     "LPs": "Liquidity Providers",
-    "Security": "Security"
+    "gauge": "Gauge Vote",
+    "Security": "Security",
+    "fees": "Fees"
 }
