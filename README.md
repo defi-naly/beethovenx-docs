@@ -1,4 +1,4 @@
-# [Beethoven X - Docs](https://docs-beta.beets.fi/)
+# [Beets - Docs](https://docs-beta.beets.fi/)
 
-The official website for the Beethoven X Documents.
+The official website for the Beets Documents.
 
