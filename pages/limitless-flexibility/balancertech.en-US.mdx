@@ -1,0 +1,25 @@
+# Balancer Technology 
+
+The Beets DEX is built on Balancer technology, offering unparalleled flexibility compared to traditional DEXs, which rely on rigid pool structures. 
+
+Balancer enables liquidity pools of any composition and underlying math, allowing for fully customizable pool types. This adaptability empowers Beets to continuously evolve with the liquidity landscape, integrating new pool designs to enhance efficiency while streamlining and simplifying user experience. With the introduction of Hooks and Dynamic Swap Fees in Balancer v3, the potential for DEX customization within the Beets DEX is virtually limitless.
+
+## Custom Pool Types
+
+The Balancer protocol architecture comprises three primary components, each strategically designed to enhance flexibility and minimize the intricacies involved in developing custom pool types. 
+
+* Router: Serves as the user's gateway to the protocol, offering straightforward interfaces for executing operations. (This includes the basic Router, BatchRouter, BufferRouter, and CompositeLiquidityRouter.)
+* Vault: Centralizes liquidity operations and manages accounting, streamlining the handling of token balances across multiple pools.
+* Pool: Exposes precise pool mathematics through invariant calculations, enabling developers to harness powerful functionalities without delving into intricate details.
+
+This design philosophy ensures that building pools on Balancer is intuitive and efficient, with the vault shouldering the burden of complexity, allowing pool creators to unleash their creativity without worrying about accounting details. The Vault is part of the core protocol, but developers can build custom pools and routers.
+
+## Hooks
+Hooks introduce a framework to extend existing pool types at various key points throughout the pool’s lifecycle. Hooks can execute actions during pool operation and compute a dynamic swap fee. Hooks are implemented as standalone contracts that can have their own internal logic and state. One hook contract can facilitate many pools (and pool types).
+
+Hooks allows developers to:
+
+* Customize Pool Behavior: Hooks enable the customization of pool logic at various stages of the pool lifecycle, offering the ability to create specialized AMM strategies.
+* Enhance Liquidity Management: With hooks, developers can implement dynamic fee structures, innovative yield strategies, and more, optimizing liquidity for different use cases.
+* Expand the Design Space: Whether it’s integrating new financial mechanisms or creating unique user experiences, hooks open up a vast design space for experimentation and innovation.
+
