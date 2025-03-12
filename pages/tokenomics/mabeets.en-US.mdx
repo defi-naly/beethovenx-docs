@@ -1,0 +1,53 @@
+# maBEETS
+maBEETS unlocks the ability for users to influence the evolution of the protocol through decentralized governance. maBEETS are the key to governance power on the protocol and are essential for participating in BIPs (Beets Improvement Proposals) and emission allocations through Gauge Votes.
+
+Additionally, a portion of the total protocol fees (from all Beets products) flows to maBEETS holders in the form of a Gauge Bounty. This mechanism ensures users actively contributing to the protocol can claim BEETS bounties via engaging in the Gauge Vote.
+
+The primary source of liquidity for the BEETS token is the 80/20 pool on Sonic. Users who enter this pool and mint maBEETS unlock maturity-adjusted voting power and BEETS rewards. Upon the creation of a maBEETS position, users also receive a receipt token in the form of an evolving financial NFT. This mechanism utilises an innovative maturity-powered primitive known as the Reliquary.
+
+## Reliquary
+
+The Reliquary is a yield and voting power distribution primitive that offers an evolution of the MasterChef contract, as well as an alternative solution to the shortcomings of the current vote escrowed model.
+
+Building from the MasterChef contract, the number of rewards emitted for a position is no longer purely based on the size but also the age or ‘maturity’ of the staked LP. Additionally, utilising evolving financial NFTs, the Reliquary offers users the freedom and flexibility to enter a governance position without locking any capital away.
+
+Instead of users needing to lock a position to gain voting power and boosted emissions, the Reliquary incorporates a concept known as maturity. Maturity persuades users / DAOs to earn additional incentives/governance power by cultivating a position over time. Maturity scales a position's power up relative to different levels, with each increasing tier progressively unlocking more rewards and voting power.
+
+This system is essentially the reverse of the vote escrow(ve) model; voting power is no longer dictated by how long users are willing to lock tokens for, but instead by how long they have been a participant in the protocol. Users are not forcibly locked and can exit their positions whenever they choose.
+
+To create a maBEETS position users head to the maBEETS section on the UI and click “Get maBEETS”. Upon depositing BEETS/stS 80/20 into this pool, the backend will seamlessly utilise the Reliquary contract to create a maturity-adjusted BEETS position. 
+
+## maBEETS Mechanics
+
+The Fresh BEETS Pool enhances governance efficiency by utilizing an 80/20 BEETS/stS weighted pool instead of traditional single-staking models. This approach strengthens liquidity, ensuring that staked BEETS contribute to market depth rather than reducing it. Additionally, exposure to stS helps hedge risk and supports price appreciation, while the incentive structure optimizes rewards and offers asymmetric upside potential.
+
+When users provide liquidity to the Fresh BEETS Pool, they receive fBEETS, a receipt token with no inherent voting power or BEETS incentives. To activate these benefits, fBEETS must be deposited into the Reliquary contract, an innovative mechanism that unlocks voting power and BEETS rewards. The Reliquary also boosts rewards over time, rewarding long-term participation. Upon deposit, users receive a financial NFT, known as a Relic, which serves as proof of their position.
+
+As fBEETS positions mature within the Reliquary, they are converted into maBEETS, which grant increasing governance influence and BEETS rewards based on maturity. The BEETS fNFT Relic continuously tracks this evolving position, ensuring that long-term participants benefit from enhanced voting power and yield.
+
+## Maturity 
+
+As a user’s position increases in maturity, it boosts the underlying voting power relative to the maturity curve. Whereas previously, 1 fBEETS was equal to 1 vote, users will have to wait till week 11 before achieving this same relationship. Here is a simple overview of how fBEETS scale into maBEETS for voting alongside maturity:
+
+* 100 fBEETs at Week 1 = 4 maBEETS
+* 100 fBEETS at Week 7 = 50 maBEETS
+* 100 fBEETS at Week 11 = 100 maBEETS
+
+
+maBEETS are the maturity-adjusted fBEETS that a user holds. Upon entering a maBEETS position, users receive an NFT receipt token that tracks these underlying Maturity Adjusted BEETS. These maBEETS scale up in relation to the maturity curve. As the maBEETS increase, the amount of rewards distributed to the position increases too. Here is a simple overview of how fBEETS scales into maBEETS alongside maturity:
+
+* 100 fBEETs at Week 1 = 400 maBEETS
+* 100 fBEETS at Week 7 = 5000 maBEETS
+* 100 fBEETS at Week 11 = 10000 maBEETS
+* Users BEETS rewards = (Total BEETS rewards / Total number of maBEETS) * The number of boosted maBEETS a user ownsimage
+
+## Relics 
+
+Upon the creation of a maBEETS position, users receive a financial NFT as a receipt token of their position — a Relic. This NFT holds all the information regarding a user’s position. And as the position is directly tied to the NFT, not the user’s wallets, it opens up a plethora of flexible opportunities:
+
+* Fully Liquid Position — Ability to exit at any time
+* Gamified evolving NFT — Level up, and unlock increasingly more powerful NFTs.
+* Transferable position — Transfer, merge, shift and split positions.
+* Secondary markets — Harness secondary markets in which mature positions will likely sell at a premium
+
+Levelling up is a seamless and simple process. Users can level themselves up directly on the UI every time their maBEETS Relic has reached a new maturity level. The duration to the next qualifying maturity step is shown directly on the maBEETS page. Levelling up is a super simple process and only requires the minimal cost of S gas to do so.
