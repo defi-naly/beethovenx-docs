@@ -1,4 +1,24 @@
 # Security 
-Balancer Smart Contracts have been extensively battle-tested and audited. Alongside rigorous security audits from Trail Of Bits, Certora, and SpearBit, Balancer v2, and v3 have an ongoing $1,000,000 bug bounty. Gyroscope Pools, and the StableSurge Hook have also been audited by Certora. 
+Without a bulletproof foundation that has been put through rigorous testing, users are exposed to elevated risk factors that compromise safety and adoption. At Beets, we prioritize security as a fundamental, and as such we have invested heavily in any action that bolsters security for our users.
+
+## Risks 
+
+The Beets DEX is built using open-source, immutable contracts.  Any pool updates are made by deploying brand new factories/pools and require users to electively migrate. While this approach ensures maximum transparency, it also introduces potential attack vectors, as malicious actors may exploit unforeseen bugs. In a DEX, these vulnerabilities are most commonly found at the pool level, where errors in code deployment can create opportunities for manipulation. Balancer Technology strategically tries to mitigate this risk through its Vault Architecture.
+
+Balancer's Vault Architecture separates AMM logic (pool types) from token management and accounting. Since pools no longer need to actively manage their own assets—the Vault handles this—a greater degree of simplicity is achieved, enabling new pool development and innovation. While the Vault has evolved from v2 to v3 through technical upgrades, it has been battle-tested with billions of dollars in liquidity, extensively audited, and protected by one of the largest bug bounties in DeFi for years. Custom Pool types have also been extensively audited. 
+
+The Beets Vault is a byte-for-byte fork of Balancer, with no modifications to the original code.
+
+## Audits
+
+The deployment of Beets on Sonic uses Balancer’s canonical Vault address, ensuring that the exact same code was deployed as in the official Balancer V2 and V3 deployments. Balancer V2 and V3 contracts have been audited by Trail of Bits, Certora, and SpearBit. Certora has also audited the Gyroscope Pools and the StableSurge Hook. 
+
+Full audit reports can be found below:
+
+* Balancer v2 audits can be found [here](https://balancer.gitbook.io/balancer-v2/security/audits) 
+* Balancer v3 audits can be found [here](https://github.com/balancer/balancer-v3-monorepo/tree/main/audits) 
 
 
+## Bug Bounty
+
+Balancer v2 and v3 also have a $1,000,000 bug bounty live on ImmuneFi, the full scope can be found [here](https://immunefi.com/bug-bounty/balancer/scope/#top). 
