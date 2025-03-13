@@ -1,5 +1,6 @@
 {
     "transactions": "Transactions",
     "deployments": "Deployments",
-    "subgraphs": "Subgraphs"
+    "subgraphs": "Subgraphs",
+    "wallets": "Wallets and Contracts"
 }
