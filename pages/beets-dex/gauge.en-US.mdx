@@ -4,7 +4,7 @@ The gauge vote is an efficient mechanism for directing BEETS emissions to Liquid
 
 ## Protocol Bounties and Gauge Caps
 
-Since the implementation of [BIP-24](https://snapshot.org/#/beets.eth/proposal/0xe1489639baffe5bb8117da677349a67e80197ab6d34d5efb1b49786ca76cf83a), Beets also offers gauge bounties for users to vote for gauge pools that significantly contribute to protocol fees. Currently, the threshold for protocol provided bounties is set at 1% of the previous epoch fees. The bounties that these pools receive are calculated as a weighted average of their contribution towards protocol fees \* total beets that flow to maBEETS holders as gauge incentives.
+Since the implementation of [BIP-24](https://snapshot.org/#/beets.eth/proposal/0xe1489639baffe5bb8117da677349a67e80197ab6d34d5efb1b49786ca76cf83a), Beets also offers gauge bounties for users to vote for gauge pools that significantly contribute to protocol fees. Currently, the threshold for protocol provided bounties is set at 0.2% of the previous epoch fees. The bounties that these pools receive are calculated as a weighted average of their contribution towards protocol fees \* total beets that flow to maBEETS holders as gauge incentives.
 
 ## How does it work??
 
@@ -26,7 +26,6 @@ Community pools can be requested to add to the gauge vote, provided the followin
 -   The maximum weight discrepancy of the pool is 80/20.
 -   Pool must be owned by the Beethoven multi-sig, this is the default owner when creating a pool through the UI
 -   The pool contract needs to be verified
--   Community pools must receive at least 0.15% of the vote before weight is assigned.
 -   The liquidity committee reserves the right to reject a pool for any reason and to kill any pool’s allocation if deemed malicious
 
 ## Useful third-party Sites
