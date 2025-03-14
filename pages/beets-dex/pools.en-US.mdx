@@ -17,7 +17,7 @@ This Rate Provider is a specific contract that accounts for the slow appreciatio
 Beets navigates this problem by integrating a rate provider contract that constantly updates the ratio between the two assets upon any swap. Instead of assuming a 1:1 ratio, the rate provider queries the blockchain and constantly updates to the correct ratio, ensuring LPs maintain exposure to Yield appreciation.
 
 
-### StablePool Usecase: 
+### StablePool PMF 
 
 * Efficient Stable Asset Swaps with Low Slippage: StablePools optimize for deep liquidity and minimal price impact using StableSwap math, ensuring efficient, low-slippage trading for stable assets while adapting to de-pegging risks.
 
@@ -33,7 +33,7 @@ Weighted pools extend the constant product AMM model (x * y = k) by incorporatin
 
 With every trade, token prices shift slightly, incentivizing traders and arbitrageurs to rebalance the pool while generating fees. This design flips traditional index funds—users aren’t paying for portfolio management; they’re getting paid to hold assets in chosen ratios.
 
-### Weighted Pool PMF:
+### Weighted Pool PMF
 
 * Flexible Liquidity & Customizable Portfolio Management: Weighted Pools remove the 50/50 constraint, allowing up to eight assets with customizable weights, making them ideal for on-chain indices and dynamic portfolio management.
 
@@ -46,7 +46,7 @@ Elliptic CLPs (E-CLPs), built by Gyroscope, allow trading along the curve of an 
 
 E-CLPs have two key properties: price bounds and an uneven liquidity profile. These features enable highly customizable liquidity profiles, enhancing capital efficiency in expected trading ranges. The elliptical curve allows for asymmetric liquidity, making it adaptable to various trading curves, including Stableswap or constant product. Price bounds further optimize capital efficiency by limiting liquidity to an expected trading range.
 
-### E-CLP PMF:
+### E-CLP PMF
 
 * Simplified, Passive Liquidity Management: E-CLPs provide passive liquidity management by allowing the pool deployer to set price bounds at launch, eliminating the need for users to monitor or adjust parameters, creating a seamless experience similar to traditional pools with the efficiency of Uni V3.
 
@@ -61,10 +61,10 @@ While not tied to a specific AMM model, they often use Stable Math due to its ef
 
 Any ERC4626-compliant token can easily be added to a boosted pool and swapped on Beets.
 
-### Boosted Pool PMF:
+### Boosted Pool PMF
 
-* Users & Liquidity Providers: Boosted Pools simplify yield generation by offering passive exposure to AMM swap rewards and lending market interest within a single position, allowing liquidity providers to amplify their rewards without the need for active management. This streamlined approach reduces complexity while enhancing capital efficiency.
+* Simplified Yield Generation: Boosted Pools simplify yield generation by offering passive exposure to AMM swap rewards and lending market interest within a single position, allowing liquidity providers to amplify their rewards without the need for active management. This streamlined approach reduces complexity while enhancing capital efficiency.
 
-* DAOs/Protocols & Ecosystems: Boosted Pools provide an optimized structure for protocols to direct liquidity incentives to a single pool, driving token liquidity growth. This enables DAOs and ecosystems to scale liquidity in both DEXs and lending markets, creating a more unified incentive system that supports token utility and enhanced liquidity efficiency.
+* Optimised DAO Incentive Structure: Boosted Pools provide an optimized structure for protocols to direct liquidity incentives to a single pool, driving token liquidity growth. This enables DAOs and ecosystems to scale liquidity in both DEXs and lending markets, creating a more unified incentive system that supports token utility and enhanced liquidity efficiency.
 
-* Networks & DeFi Infrastructure: Boosted Pools simultaneously grow two critical liquidity markets—DEXs for permissionless swaps and lending markets for permissionless loans. This means that for every $1 in a Boosted Pool, the network's metrics increase by $2.
+* Network Symbiosis: Boosted Pools simultaneously grow two critical liquidity markets—DEXs for permissionless swaps and lending markets for permissionless loans. This means that for every $1 in a Boosted Pool, the network's metrics increase by $2.
