@@ -1,18 +1,14 @@
 # Balancer Technology 
 
-The Beets DEX is built on Balancer technology, offering unparalleled flexibility compared to traditional DEXs, which rely on rigid pool structures. 
+The Beets DEX, powered by Balancer technology, offers a modular and customizable framework for liquidity management, breaking free from the limitations of traditional, rigid AMM designs. With support for custom pool types, dynamic swap fees, and hooks, Beets enables users and partners to harness liquidity solutions tailored to their unique objectives.
 
-Balancer enables liquidity pools of any composition and underlying math, allowing for fully customizable pool types. This adaptability empowers Beets to continuously evolve with the liquidity landscape, integrating new pool designs to enhance efficiency while streamlining and simplifying user experience. With the introduction of Hooks and Dynamic Swap Fees in Balancer v3, the potential for DEX customization within the Beets DEX is virtually limitless.
+### Customizable Pool Architecture
 
-## Custom Pool Types
+At its core, the Beets DEX leverages Balancer’s modular architecture, composed of three strategic components:
 
-The Balancer protocol architecture comprises three primary components, each strategically designed to enhance flexibility and minimize the intricacies involved in developing custom pool types. 
-
-* Router: Serves as the user's gateway to the protocol, offering straightforward interfaces for executing operations.
-* Vault: Centralizes liquidity operations and manages accounting, streamlining the handling of token balances across multiple pools.
-* Pool: Exposes precise pool mathematics through invariant calculations, enabling developers to harness powerful functionalities without delving into intricate details.
-
-This design philosophy ensures that building pools on Balancer is intuitive and efficient, with the vault shouldering the burden of complexity, allowing pool creators to unleash their creativity without worrying about accounting details. The Vault is part of the core protocol, but developers can build custom pools and routers.
+- **Router** – Serves as the entry point for users and developers, simplifying liquidity operations and supporting advanced functionalities like batch routing.
+- **Vault** – Centralizes liquidity and accounting, allowing efficient management of token balances while reducing operational complexity.
+- **Pool** – The layer where unique math and liquidity strategies are applied, enabling projects to design customized liquidity behaviors and configurations.
 
 ## Hooks
 Hooks introduce a framework to extend existing pool types at various key points throughout the pool’s lifecycle. Hooks can execute actions during pool operation and compute a dynamic swap fee. Hooks are implemented as standalone contracts that can have their own internal logic and state. One hook contract can facilitate many pools (and pool types).
