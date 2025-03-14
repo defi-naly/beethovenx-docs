@@ -3,13 +3,11 @@
 
 ### Swap Fees
 
-Every time a trade takes place on the protocol, a swap fee is taken. Each pool has its own swap fee uniquely set based on the underlying assets and AMM logic being used. A portion of these fees flow to liquidity providers and the other portion flows to Beets.
-
-The protocol sets a percentage fee that is deducted from the total amount of swap fees collected. This percentage fee is currently different for each network that Beets is deployed on.
+Every trade on the protocol incurs a swap fee, which varies by pool based on the underlying assets and AMM logic. A portion of this fee is distributed to liquidity providers, while the rest is collected as a protocol fee for Beets. The protocol applies a percentage-based fee on the total swap fees collected, with this percentage varying across the different networks where Beets is deployed.
 
 ### Yield Bearing Fees
 
-On any IB token deposited into a Liquidity Pool on the DEX, Beets takes a fee on the yield generated. This unique protocol fee ensures a sustainable source of protocol revenue that is purely a function of TVL; no longer is the protocol dependent on swap volume to ensure longevity. This is unique to Beets and Balancer, no other DEXs have the flexibility to utilize this mechanism. Like swap fees, this interest-bearing fee applies to all networks Beets is deployed.
+When a yield-bearing (YB) token is deposited into a Liquidity Pool on the DEX, Beets charges a fee on the yield generated. This unique protocol fee creates a sustainable revenue stream directly tied to TVL, reducing dependence on swap volume for long-term viability. This mechanism is exclusive to Beets and Balancer—no other DEXs offer this level of flexibility. Similar to swap fees, this interest-bearing fee applies across all networks where Beets is deployed.
 
 ### Flash Loan Fee
 
