@@ -58,7 +58,7 @@ const FEEDBACK_LINK_WITH_TRANSLATIONS = {
 export default {
     projectLink: 'https://github.com/beethovenxfi',
     docsRepositoryBase: 'https://github.com/beethovenxfi/beethovenx-docs/blob/main/pages',
-    titleSuffix: ' – Beethoven X',
+    titleSuffix: ' – Beets',
     search: true,
     unstable_flexsearch: true,
     floatTOC: true,
@@ -100,24 +100,24 @@ export default {
                     name="og:description"
                     content={
                         meta.description ||
-                        'Innovation meets imagination. Beethoven X is a next generation decentralized investment platform built for the future of finance. Leveraging the most advanced technology in the industry, we provide innovative, capital-efficient, and sustainable solutions for all DeFi users.'
+                        'The Flagship LST Hub on Sonic. From seamless staking to earning real yield on LST-focused liquidity pools, beets is the ultimate destination for your liquid-staked tokens'
                     }
                 />
-                <meta name="og:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
+                <meta name="og:title" content={title ? title + ' – Beets Docs' : 'Beets - Docs'} />
                 <meta name="og:image" content={ogImage} />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@beethoven_x" />
+                <meta name="twitter:site" content="@beets_fi" />
                 <meta name="twitter:image" content={ogImage} />
                 <meta property="twitter:domain" content="docs.beets.fi" />
                 <meta property="twitter:url" content="https://docs.beets.fi" />
-                <meta name="twitter:title" content={title ? title + ' – Beethoven X Docs' : 'Beethoven X - Docs'} />
+                <meta name="twitter:title" content={title ? title + ' – Beets Docs' : 'Beets - Docs'} />
                 <meta
                     name="twitter:description"
-                    content="Innovation meets imagination. Beethoven X is a next generation decentralized investment platform built for the future of finance. Leveraging the most advanced technology in the industry, we provide innovative, capital-efficient, and sustainable solutions for all DeFi users."
+                    content="The Flagship LST Hub on Sonic. From seamless staking to earning real yield on LST-focused liquidity pools, beets is the ultimate destination for your liquid-staked tokens"
                 />
 
-                <meta name="apple-mobile-web-app-title" content="Beethoven X Docs" />
+                <meta name="apple-mobile-web-app-title" content="Beets Docs" />
             </>
         );
     },
