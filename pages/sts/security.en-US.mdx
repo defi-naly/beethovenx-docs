@@ -1,7 +1,46 @@
 # Security 
+The Beet Staked (stS) contract has been developed with a strong emphasis on security. It is a single smart contract with minimal dependencies, ensuring a straightforward and efficient design. The contract avoids complex mathematical computations that could introduce risks, focusing instead on simplicity and clarity. Additionally, the code is optimized for readability, allowing for thorough understanding and review. Comprehensive unit tests, including fuzz testing, cover 100% of the codebase, and external reviewers have found no gaps in the test coverage.
 
 ## Risks 
-While Beets has carefully selected and monitored validators, there exists a risk of one or more of the validators being slashed. To combat this, Beets distributes staked S across multiple validators, minimizing the slashing impact arising from the actions of any individual validator. Although the stS code is vetted and audited, there is also always smart contract risk present. There always exists the possibility of malicious users exploiting a vulnerability or a bug in the contract.
+While Beets has carefully selected and monitored validators, there exists a risk of one or more of the validators being slashed. To combat this, Beets distributes staked S across multiple validators, minimizing the slashing impact arising from the actions of any individual validator. Although the stS code is vetted and audited, smart contract risk is always present. There always exists the possibility of malicious users exploiting a vulnerability or a bug in the contract.
 
-## Audits 
+## Audits and Bug Bounty
 The stS contracts are audited by [Spearbit](https://github.com/beethovenxfi/sonic-staking/blob/main/audits/report-cantinacode-sonic-1209.pdf) and [Trail of Bits](https://github.com/beethovenxfi/sonic-staking/blob/main/audits/2025-01-beethovenx-sonicstaking-securityreview.pdf).
+
+A 200k bug bounty is available: [Immunefi Bug Bounty](https://immunefi.com/bug-bounty/beets/information/)
+
+## Roles and Multisigs
+The Sonic Staking contract is ownable and also uses OpenZeppelin AccessControl. Under access-control, Beets defines the following roles:
+
+- **Default Admin Role**
+- **Operator**
+- **Claim**
+
+The owner of the contract is a 3-week Timelock run by a 5/7 multisig and has the following permissions:
+- Upgrade the contract
+  - It has a 3-week timelock to make sure users can exit stS (2-week unbonding) before any malicious update could go live.
+
+The **Default Admin role** is granted to a 1-day Timelock run by a 5/7 multisig and has the following permissions:
+- Grant/Remove roles
+- Set the withdrawal delay
+- Set treasury address
+- Set protocol fees
+- Pause/Unpause deposit
+- Pause/Unpause undelegate
+- Pause/Unpause undelegate from pool
+- Pause/Unpause withdraw
+
+The **Operator role** is granted to a 3/6 multisig and has the following permissions:
+- Delegate
+- Initiate clawback to the pool
+- Execute clawback to the pool
+- Pause (which pauses deposits, undelegations, undelegations from pool, and withdrawals)
+- Donate to increase the rate
+
+The **Claim role** will be given to an EOA (for automation purposes) and has the following permission:
+- Claim rewards
+
+## Oracles
+- **Redstone:** [Redstone Oracle](https://app.redstone.finance/app/token/stS_FUNDAMENTAL/)
+- **Pyth:** [Pyth Network](https://docs.pyth.network/price-feeds/sponsored-feeds/evm#sonic-mainnet)
+- **Stork:** [Stork Oracle](https://docs.stork.network/resources/asset-id-registry)
